@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "@remix-run/react"
 
 export default function Index() {
   return (
@@ -7,5 +7,5 @@ export default function Index() {
       <p>Start by creating a new board</p>
       <Link to="/boards">Go to boards</Link>
     </div>
-  );
+  )
 }
