@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install Playwright
+        run: pnpx playwright install --with-deps
+
       - name: Prettier
         run: pnpm prettier:check
 
@@ -48,3 +51,6 @@ jobs:
 
       - name: Type check
         run: pnpm typecheck
+
+      - name: Run Storybook tests
+        run: pnpm test-storybook:ci
