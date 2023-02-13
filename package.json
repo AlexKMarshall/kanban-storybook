@@ -12,7 +12,8 @@
     "prettier:check": "pnpm run prettier --check .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "pnpm dlx chromatic"
+    "chromatic": "pnpm dlx chromatic",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@remix-run/node": "^1.12.0",
@@ -32,6 +33,7 @@
     "@storybook/blocks": "^7.0.0-beta.46",
     "@storybook/react": "^7.0.0-beta.46",
     "@storybook/react-vite": "7.0.0-beta.46",
+    "@storybook/test-runner": "^0.9.4",
     "@storybook/testing-library": "^0.0.14-next.1",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
