@@ -1,14 +1,23 @@
 import IndexRoute from "~/routes";
-import { createMemoryRouter, RouterProvider } from "react-router-dom";
+import { unstable_createRemixStub } from "@remix-run/testing";
+import BoardsRoute, { loader as boardsLoader } from "~/routes/boards";
 
 type TestAppProps = {
   url: string;
 };
 
-export function TestApp({ url }: TestAppProps) {
-  const router = createMemoryRouter([{ path: "/", element: <IndexRoute /> }], {
-    initialEntries: [url],
-  });
+export const TestApp = ({ url }: TestAppProps) => {
+  const RemixStub = unstable_createRemixStub([
+    {
+      path: "/",
+      element: <IndexRoute />,
+    },
+    {
+      path: "/boards",
+      element: <BoardsRoute />,
+      loader: boardsLoader,
+    },
+  ]);
 
-  return <RouterProvider router={router} />;
-}
+  return <RemixStub initialEntries={[url]} />;
+};

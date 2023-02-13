@@ -3,7 +3,7 @@ import { useLoaderData } from "@remix-run/react";
 export const loader = async () => {
   return [
     { name: "Project 1", id: 1 },
-    { name: "Project 2", id: 2 },
+    { name: "Project new", id: 2 },
   ];
 };
 
@@ -12,11 +12,7 @@ export default function BoardsRoute() {
   return (
     <div>
       <h1>Boards</h1>
-      <ul>
-        {boards.map((board) => (
-          <li key={board.id}>{board.name}</li>
-        ))}
-      </ul>
+      <pre>{JSON.stringify(boards, null, 2)}</pre>
     </div>
   );
 }
