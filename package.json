@@ -6,8 +6,9 @@
     "dev": "remix dev",
     "start": "remix-serve build",
     "typecheck": "tsc",
-    "prettier:write": "prettier --write .",
-    "prettier:check": "prettier --check .",
+    "prettier": "prettier --ignore-path .eslintignore .",
+    "prettier:write": "pnpm run prettier --write .",
+    "prettier:check": "pnpm run prettier --check .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "pnpm dlx chromatic"

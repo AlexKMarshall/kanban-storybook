@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react"
 
-import { TestApp } from "~/test/TestApp";
+import { TestApp } from "~/test/TestApp"
 
 const meta: Meta<typeof TestApp> = {
   title: "Routes/boards",
@@ -8,9 +8,9 @@ const meta: Meta<typeof TestApp> = {
   args: {
     url: "/boards",
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
-export const Default: Story = {};
+export const Default: Story = {}

@@ -4,5 +4,8 @@ node_modules
 /build
 /public/build
 .env
+build-storybook.log
 
 *.log
+
+pnpm-lock.yaml
