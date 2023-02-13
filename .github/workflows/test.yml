@@ -54,3 +54,6 @@ jobs:
 
       - name: Run Storybook tests
         run: pnpm test-storybook:ci
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
